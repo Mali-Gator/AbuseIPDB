@@ -1,5 +1,6 @@
-# It is recommended to store the AbuseIPDB API key as a variable so the key does not have to be coded into the script.
-$apiKey = "[ABUSEIPDB API KEY]"
+## This script takes a list of ip addresses in the "input_ip_addresses.csv" file and scans them against AbuseIPDB. It returns results of how many times that IP was reported to AbuseIPDB
+
+$apiKey = "[INSERT API KEY HERE]"
 
 # Import the IP addresses from the CSV file
 $ipAddresses = Import-Csv -Path "input_ip_addresses.csv" | ForEach-Object -Process { $_.ip }
